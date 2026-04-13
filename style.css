@@ -14,3 +14,48 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+#leaders {
+  background: url("leaders.jpg") center/cover no-repeat;
+}
+
+#camp {
+  background: url("camp.jpg") center/cover no-repeat;
+}
+
+#schedule {
+  background: url("schedule.jpg") center/cover no-repeat;
+}
+
+#summer {
+  background: url("summer.jpg") center/cover no-repeat;
+}
+
+#cost {
+  background: url("cost.jpg") center/cover no-repeat;
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  color: white;
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* 暗くする */
+  z-index: 0;
+}
+
+section * {
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(255,255,255,0.9);
+}

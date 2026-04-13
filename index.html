@@ -1,200 +1,203 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>2026年度 静岡大学スキー部</title>
+<meta charset="UTF-8">
+<title>2026年度 静岡大学スキー部</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-      background: #f4f6f8;
-      line-height: 1.6;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  background: #f4f6f8;
+}
 
-    header {
-      background: linear-gradient(135deg, #003366, #0077cc);
-      color: white;
-      padding: 40px;
-      text-align: center;
-    }
+/* ヘッダー */
+header {
+  background: linear-gradient(135deg, #003366, #0077cc);
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
 
-    nav {
-      background: #222;
-      padding: 10px;
-      text-align: center;
-    }
+/* ナビ */
+nav {
+  background: #222;
+  padding: 10px;
+  text-align: center;
+}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+/* セクション（背景用） */
+section {
+  width: 100%;
+  padding: 80px 20px;
+  color: white;
+  position: relative;
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      margin-bottom: 25px;
-      border-radius: 12px;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-    }
+/* 黒フィルター */
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+}
 
-    h2 {
-      border-left: 5px solid #0077cc;
-      padding-left: 10px;
-    }
+/* 中身を前面に */
+section * {
+  position: relative;
+  z-index: 1;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+/* カード */
+.card {
+  background: rgba(255,255,255,0.9);
+  color: black;
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
 
-    footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+/* 見出し */
+h2 {
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+}
 
-    .highlight {
-      color: #0077cc;
-      font-weight: bold;
-    }
+/* カレンダー */
+.calendar {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  </style>
+.month img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+/* 背景画像 */
+#leaders { background: url("leaders.jpg") center/cover no-repeat fixed; }
+#camp { background: url("camp.jpg") center/cover no-repeat fixed; }
+#schedule { background: url("schedule.jpg") center/cover no-repeat fixed; }
+#calendar { background: url("calendar.jpg") center/cover no-repeat fixed; }
+#summer { background: url("summer.jpg") center/cover no-repeat fixed; }
+#cost { background: url("cost.jpg") center/cover no-repeat fixed; }
+
+/* フッター */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>🎿 静岡大学スキー部</h1>
-  <p>2026年度 新入部員募集中！🔥</p>
+<h1>🎿 静岡大学スキー部</h1>
+<p>2026年度 新入部員募集中！🔥</p>
 </header>
 
 <nav>
-  <a href="#leaders">幹部</a>
-  <a href="#camp">合宿</a>
-  <a href="#schedule">スケジュール</a>
-  <a href="#summer">夏活動</a>
-  <a href="#cost">部費</a>
+<a href="#leaders">幹部</a>
+<a href="#camp">合宿</a>
+<a href="#schedule">スケジュール</a>
+<a href="#calendar">カレンダー</a>
+<a href="#summer">夏活動</a>
+<a href="#cost">部費</a>
 </nav>
 
 <section id="leaders">
-  <div class="card">
-    <h2>■ 幹部</h2>
-    <p>部長：横井 晴</p>
-    <p>副部長：服部 杏海 / 杉山 雄哉</p>
-    <p>三年主将：石井 光</p>
-    <p>二年主将：前嶋 里奈</p>
-  </div>
+<div class="card">
+<h2>■ 幹部</h2>
+<p>部長：横井 晴</p>
+<p>副部長：服部 杏海 / 杉山 雄哉</p>
+<p>三年主将：石井 光</p>
+<p>二年主将：前嶋 里奈</p>
+</div>
 </section>
 
 <section id="camp">
-  <div class="card">
-    <h2>■ 合宿について</h2>
-
-    <p>スキー部では、合宿が大きく2種類あります！</p>
-
-    <ul>
-      <li>通常合宿（みんなで楽しく滑る）</li>
-      <li>アルペン合宿（ポール練習メインでガチめ）</li>
-    </ul>
-
-    <p class="highlight">👉 この2つを同時にやってます</p>
-
-    <h3>● 参加について</h3>
-    <p>自分のスタイルに合わせて「通常」か「アルペン」かを選べます！</p>
-
-    <h3>● ちょっと大事な話（費用）</h3>
-    <p>アルペンは追加で部費あり<br>払ってないと参加できないので注意🙏</p>
-
-    <h3>● 大会</h3>
-    <p>岩岳の学生大会は全員で出ます！🔥</p>
-
-  </div>
+<div class="card">
+<h2>■ 合宿について</h2>
+<ul>
+<li>通常合宿（楽しく滑る）</li>
+<li>アルペン合宿（ガチ練習）</li>
+</ul>
+<p>👉 どちらも選べます</p>
+<p>アルペンは追加部費あり（未払いは参加不可）</p>
+<p>岩岳大会は全員参加🔥</p>
+</div>
 </section>
 
 <section id="schedule">
-  <div class="card">
-    <h2>■ 合宿スケジュール</h2>
-
-    <ul>
-      <li>11月：シーズンイン（狭山・日帰り）</li>
-      <li>12月：ダイナランド（1泊2日）</li>
-      <li>1月：菅平（アルペン合宿）</li>
-      <li>2月：全体合宿（4泊5日）</li>
-      <li>2月：アルペン合宿×2回（木島平）</li>
-      <li>3月：大会合宿（岩岳・さのさか）</li>
-    </ul>
-
-    <p class="highlight">👉 冬はガッツリ滑ります</p>
-  </div>
-</section>
-  <div class="card">
-  <h2>■ カレンダー</h2>
-
-  <div class="calendar">
-    <div class="month">
-      <h3>1月</h3>
-      <img src="jan.png" alt="1月カレンダー">
-    </div>
-
-    <div class="month">
-      <h3>2月</h3>
-      <img src="feb.png" alt="2月カレンダー">
-    </div>
-
-    <div class="month">
-      <h3>3月</h3>
-      <img src="mar.png" alt="3月カレンダー">
-    </div>
-  </div>
+<div class="card">
+<h2>■ 合宿スケジュール</h2>
+<ul>
+<li>11月：シーズンイン</li>
+<li>12月：ダイナランド</li>
+<li>1月：菅平</li>
+<li>2月：全体合宿</li>
+<li>3月：岩岳大会</li>
+</ul>
 </div>
+</section>
+
+<section id="calendar">
+<div class="card">
+<h2>■ カレンダー</h2>
+<div class="calendar">
+<div>
+<h3>1月</h3>
+<img src="jan.png">
+</div>
+<div>
+<h3>2月</h3>
+<img src="feb.png">
+</div>
+<div>
+<h3>3月</h3>
+<img src="mar.png">
+</div>
+</div>
+</div>
+</section>
 
 <section id="summer">
-  <div class="card">
-    <h2>■ 夏の活動</h2>
-
-    <ul>
-      <li>月2回：体育館でゆるスポーツ</li>
-      <li>レク：スポッチャ / 浜名湖サイクリング / 釣り</li>
-      <li>夏休み：プチ旅行（運転練習も兼ねて🚗）</li>
-    </ul>
-
-  </div>
+<div class="card">
+<h2>■ 夏の活動</h2>
+<ul>
+<li>体育館活動</li>
+<li>レク・旅行</li>
+<li>運転練習</li>
+</ul>
+</div>
 </section>
 
 <section id="cost">
-  <div class="card">
-    <h2>■ 部費について</h2>
-
-    <p>部費は「貯金」みたいな感じ👇<br>
-    → 冬の合宿費がその分安くなります</p>
-
-    <h3>● 目安</h3>
-    <ul>
-      <li>通常：15,000円 × 2回</li>
-      <li>アルペン：15,000円 × 3回</li>
-    </ul>
-
-    <h3>■ シーズン券</h3>
-    <p>
-      「マックアース」のシーズン券（64,000円）おすすめ！<br><br>
-      👉 いろんなスキー場で滑れる<br>
-      👉 強制じゃないので自由に決めてOK
-    </p>
-
-  </div>
+<div class="card">
+<h2>■ 部費</h2>
+<p>通常：15,000円×2</p>
+<p>アルペン：15,000円×3</p>
+<p>マックアース券おすすめ（64,000円）</p>
+</div>
 </section>
 
 <footer>
-  <p>© 2026 静岡大学スキー部</p>
+<p>© 2026 静岡大学スキー部</p>
 </footer>
 
 </body>

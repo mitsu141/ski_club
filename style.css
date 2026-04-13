@@ -27,7 +27,7 @@ nav a {
   font-weight: bold;
 }
 
-/* セクション（背景用） */
+/* セクション */
 section {
   width: 100%;
   padding: 80px 20px;
@@ -44,7 +44,7 @@ section::before {
   z-index: 0;
 }
 
-/* 中身を前面に */
+/* 中身前面 */
 section * {
   position: relative;
   z-index: 1;
@@ -52,7 +52,7 @@ section * {
 
 /* カード */
 .card {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.92);
   color: black;
   max-width: 900px;
   margin: auto;
@@ -80,30 +80,13 @@ h2 {
   border-radius: 10px;
 }
 
-/* 背景画像（ここ変えるだけでOK） */
-#leaders {
-  background: url("leaders.jpg") center/cover no-repeat fixed;
-}
-
-#camp {
-  background: url("camp.jpg") center/cover no-repeat fixed;
-}
-
-#schedule {
-  background: url("schedule.jpg") center/cover no-repeat fixed;
-}
-
-#calendar {
-  background: url("calendar.jpg") center/cover no-repeat fixed;
-}
-
-#summer {
-  background: url("summer.jpg") center/cover no-repeat fixed;
-}
-
-#cost {
-  background: url("cost.jpg") center/cover no-repeat fixed;
-}
+/* 背景（PC） */
+#leaders { background: url("leaders.jpg") center/cover no-repeat fixed; }
+#camp { background: url("camp.jpg") center/cover no-repeat fixed; }
+#schedule { background: url("schedule.jpg") center/cover no-repeat fixed; }
+#calendar { background: url("calendar.jpg") center/cover no-repeat fixed; }
+#summer { background: url("summer.jpg") center/cover no-repeat fixed; }
+#cost { background: url("cost.jpg") center/cover no-repeat fixed; }
 
 /* フッター */
 footer {
@@ -113,26 +96,39 @@ footer {
   padding: 20px;
 }
 
-/* スマホ対応（超重要） */
+/* =========================
+   スマホ最適化（超重要）
+   ========================= */
 @media (max-width: 768px) {
 
   section {
     padding: 60px 15px;
   }
 
-  /* 背景のズーム防止 */
+  /* 背景の最適化 */
   #leaders, #camp, #schedule, #calendar, #summer, #cost {
-    background-attachment: scroll;   /* ← fixed解除（超重要） */
-    background-size: contain;        /* ← 全体表示 */
-    background-position: center;
+    background-attachment: scroll;   /* fixed解除（バグ防止） */
+    background-size: cover;          /* 画面いっぱい */
+    background-position: center top; /* 上寄せで自然 */
     background-repeat: no-repeat;
-    background-color: #000;          /* 余白黒でかっこよく */
   }
 
-  /* カレンダー画像調整 */
+  /* カード余白 */
+  .card {
+    padding: 20px;
+  }
+
+  /* カレンダー */
   .month img {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
+  }
+
+  /* ナビ改行対応 */
+  nav a {
+    display: inline-block;
+    margin: 5px 10px;
   }
 
 }
+

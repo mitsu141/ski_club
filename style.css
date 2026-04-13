@@ -112,3 +112,27 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
+/* スマホ対応（超重要） */
+@media (max-width: 768px) {
+
+  section {
+    padding: 60px 15px;
+  }
+
+  /* 背景のズーム防止 */
+  #leaders, #camp, #schedule, #calendar, #summer, #cost {
+    background-attachment: scroll;   /* ← fixed解除（超重要） */
+    background-size: contain;        /* ← 全体表示 */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;          /* 余白黒でかっこよく */
+  }
+
+  /* カレンダー画像調整 */
+  .month img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+}
